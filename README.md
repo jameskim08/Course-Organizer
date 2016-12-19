@@ -28,7 +28,7 @@ here</a>.
 2. Create a project folder and name it whatever you like (ie. Course Organizer)
 3. Clone or download the project into your folder
 
-** Cloning the project (Option 1)
+### Cloning the project (Option 1)
 
 1. Go inside your project folder
 2. Right click inside the folder and select "Git Bash Here"
@@ -39,7 +39,7 @@ npm install
 npm start
 ```
 
-** Downloading the project (Option 2)
+### Downloading the project (Option 2)
 
 1. Click on the green "Clone or download" button on this page and then "Download ZIP"
 2. Extract content of the zip file into your project folder
@@ -49,7 +49,7 @@ npm install
 npm start
 ```
 
-### npm scripts
+## npm scripts
 
 The `npm start` command first compiles the application, 
 then simultaneously re-compiles and runs the `lite-server`.
