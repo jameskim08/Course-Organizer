@@ -1,6 +1,7 @@
 <h2>My Courses</h2>
 <div>
-  <label>Course name:</label> <input #courseName />
+  <label>Course name:</label>
+  <input #courseName (keyup)="$event.keyCode == 13 ? add(courseName.value) : null" />
   <button (click)="add(courseName.value); courseName.value=''">
     Add
   </button>
