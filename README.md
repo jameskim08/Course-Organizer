@@ -4,7 +4,7 @@ This application is heavily based off the "Tour of Heroes" tutorial provided by 
 here</a>. The application has been modified to list courses instead of heroes. 
 
 This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
+the foundation for most of the documentation samples.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ here</a>.
 
 1. Go inside your project folder
 2. Right click inside the folder and select "Git Bash Here"
-3. Type in 'git clone https://github.com/jameskim08/Course-Organizer.git'
+3. Type in `git clone https://github.com/jameskim08/Course-Organizer.git`
 4. Open up command prompt in folder and run the following commands
 ```bash
 npm install
