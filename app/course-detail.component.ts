@@ -39,6 +39,16 @@ export class CourseDetailComponent implements OnInit {
       .then(() => this.goBack());
   }
 
+  toggleDay(day : number): void {
+    if (this.course.day.indexOf(day) != -1){
+      let index = this.course.day.indexOf(day);
+      this.course.day.splice(index, 1);
+    }else{
+      this.course.day.push(day);
+    }
+    this.course.day.sort();
+  }
+
 }
 
 
