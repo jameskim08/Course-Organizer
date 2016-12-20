@@ -1,7 +1,5 @@
 # Course Organizer Application
 
-Foo
-
 This application is heavily based off the "Tour of Heroes" tutorial provided by Angular.js <a href="https://angular.io/docs/ts/latest/tutorial/" target="_blank" title="Tour of Heroes">
 here</a>. The application has been modified to list courses instead of heroes. 
 
