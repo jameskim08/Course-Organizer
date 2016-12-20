@@ -43,9 +43,12 @@ export class CourseService {
 
   create(name: string): Promise<Course> {
     return this.http
-      .post(this.coursesUrl, JSON.stringify({name: name}), {headers: this.headers})
+      .post(this.coursesUrl, JSON.stringify({name: name, day: []}), {headers: this.headers})
       .toPromise()
-      .then(res => res.json().data)
+      .then(res => {
+        console.log(res.json().data);
+        return res.json().data;
+      })
       .catch(this.handleError);
   }
 
