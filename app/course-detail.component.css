@@ -34,6 +34,7 @@ div{
 .weekdays-btns{
   padding:0;
   display: inline-block;
+  margin: .5em 0;
 }
 
 .weekdays-btns li {
@@ -58,4 +59,25 @@ div{
 .weekdays-btns li:hover {
   color: #607D8B;
   background-color: #DDD;
+}
+
+.detail{
+  display:flex;
+  align-items: center;
+}
+
+#notes-div{
+  align-items: flex-start;
+}
+
+#notes{
+  width: 30em;
+  height: 20em;
+  margin: .5em 0;
+  font-size: 1em;
+  padding: .4em;
+}
+
+span{
+  margin: .5em 0;
 }
