@@ -34,6 +34,10 @@ export class CourseDetailComponent implements OnInit {
     this.location.back();
   }
 
+  cancel(): void {
+
+  }
+
   save(): void {
     this.courseService.update(this.course)
       .then(() => this.goBack());
@@ -47,6 +51,10 @@ export class CourseDetailComponent implements OnInit {
       this.course.day.push(day);
     }
     this.course.day.sort();
+  }
+
+  test() : void{
+    console.log(this.course.notes);
   }
 
 }

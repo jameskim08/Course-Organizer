@@ -1,14 +1,14 @@
 <div *ngIf="course">
   <h2>{{course.name}} details! </h2>
-  <div>
+  <div class="detail">
     <label>id: </label>
-    {{course.id}}
+    <span>{{course.id}}</span>
   </div>
-  <div>
+  <div class="detail">
     <label>name: </label>
     <input [(ngModel)]="course.name" placeholder ="name">
   </div>
-  <div>
+  <div class="detail">
     <label>days:</label>
     <ul class="weekdays-btns">
       <li [class.assignedDay]="course.day.indexOf(0) != -1"
@@ -27,6 +27,11 @@
           (click)="toggleDay(6)">Sat</li>
     </ul>
   </div>
+  <div class="detail" id="notes-div">
+    <label>notes: </label>
+    <textarea [(ngModel)]="course.notes" (click)="test()" placeholder="Insert notes here" id="notes">{{course.notes}}</textarea>
+  </div>
   <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>
+
 </div>
