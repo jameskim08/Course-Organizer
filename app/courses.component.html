@@ -7,19 +7,48 @@
   </button>
 </div>
 
-<ul class="courses">
-  <li *ngFor="let course of courses"
-      [class.selected]="course === selectedCourse"
-      (click)="onSelect(course)">
-    <span class="badge">{{course.id}}</span>
-    <span>{{course.name}}</span>
-    <button class="delete"
-            (click)="delete(course); $event.stopPropagation()">x</button>
-  </li>
-</ul>
-<div *ngIf="selectedCourse">
-  <h2>
-    {{selectedCourse.name | uppercase}} is selected.
-  </h2>
-  <button (click)="gotoDetail()">View Details</button>
+<div class="display-btns">
+  <button id="list-view-btn" class="selected-view-btn" (click)="displayListView()">List View</button>
+  <button id = "week-view-btn" (click)="displayWeekView()">Week View</button>
+</div>
+
+<div id="list">
+  <div id="list-view" class="selected-view">
+    <ul class="courses">
+      <li *ngFor="let course of courses"
+          [class.selected]="course === selectedCourse"
+          (click)="onSelect(course)">
+        <span class="badge">{{course.id}}</span>
+        <span>{{course.name}}</span>
+        <button class="delete"
+                (click)="delete(course); $event.stopPropagation()">x</button>
+      </li>
+    </ul>
+  </div>
+
+  <div id="week-view">
+    <div class="weekday" *ngFor="let weekday of weekdays">
+      <ng-container *ngIf="!isWeekdayEmpty(weekday)">
+        <h2>{{ weekday | date : "EEEE" }}</h2>
+        <ul class="courses">
+          <li *ngFor="let course of (courses | weekdayCourses: weekday.getDay())"
+              [routerLink]="['/detail', course.id]">
+            <span class="badge">{{course.id}}</span>
+            <span>{{course.name}}</span>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+  </div>
+
+  <div id="course-detail" *ngIf="selectedCourse">
+    <h2>
+      {{selectedCourse.name | uppercase}} is selected.
+    </h2>
+    <div id="display-notes" *ngIf="selectedCourse.notes !=''">
+      <h3>Notes:</h3>
+      <p>{{selectedCourse.notes}}</p>
+    </div>
+    <button (click)="gotoDetail()">View Details</button>
+  </div>
 </div>

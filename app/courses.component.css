@@ -6,7 +6,7 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 25em;
+  width: 22em;
 }
 .courses li {
   cursor: pointer;
@@ -51,4 +51,48 @@ button.delete {
   margin-right: .8em;
   background-color: gray !important;
   color:white;
+}
+
+.display-btns{
+  margin: 1em 0;
+}
+
+#week-view, #list-view{
+  display: none;
+}
+
+#week-view .courses{
+  width: 19em;
+}
+
+#list-view{
+  margin-right: 2.5em;
+}
+
+.selected-view{
+  display: inline-block !important;
+}
+
+.selected-view-btn{
+  color: #039be5;
+}
+
+#display-notes p{
+  white-space: pre-line;
+  max-width: 30em;
+  max-height: 20em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#course-detail{
+  display: inline-block;
+  vertical-align: top;
+  max-width: 35em;
+}
+
+div .weekday{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1em;
 }
