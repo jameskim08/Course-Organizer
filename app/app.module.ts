@@ -11,6 +11,7 @@ import { CourseDetailComponent } from './course-detail.component';
 import { CoursesComponent } from './courses.component';
 import { CourseService } from './course.service';
 import { CourseSearchComponent } from './course-search.component';
+import { WeekdayCoursesPipe } from './weekday-courses.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -32,7 +33,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
     DashboardComponent,
     CourseDetailComponent,
     CoursesComponent,
-    CourseSearchComponent
+    CourseSearchComponent,
+    WeekdayCoursesPipe
   ],
   providers: [
     CourseService
